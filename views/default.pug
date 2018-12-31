@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    main
+      block header
+        div.container  
+          div.navbar
+            div.top-menu
+              span.usename #{greeting}
+              div.button_right
+              button.button_layout.button_layout_current en
+              button.button_layout bg
+              button.button_layout ru
+            div.main-menu
+              div.button_menu(url('/')) 
+              div.button_menu(url('/train'))
+              div.button_menu(url('/auth'))
+      block content

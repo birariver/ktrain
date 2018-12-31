@@ -1,0 +1,11 @@
+extends layout
+
+block content  
+  h1.logo Если вас тут много
+  div.space ...и вы хотите запоминать результаты...
+  form.space(method='POST' action='/register')
+    div.input
+      label.lbl(for='name') ...пишите имя тут:
+      input#name(type='text', name='name')
+      button.button_reg(type='submit') Это я
+      

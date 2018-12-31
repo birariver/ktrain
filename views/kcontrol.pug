@@ -1,0 +1,17 @@
+extends layout
+
+block content  
+  h1.logo Если вас тут много
+  div.space ...и вы хотите запоминать результаты...
+  form.space(method='POST' action='/kcontrol')
+    div.input
+      label.lbl(for='name') ...пишите имя тут:
+      input#name(type='text', name='name')
+      input#layout(type='hidden', name='layout', value={layout})
+      div.buttons_form
+        button.button_reg(type='submit') Это я
+  h1.logo Чтобы начать всё заново
+  div.reset
+    div.lbl ...жмите тут...
+    input.button_reg(type='button', name='reset', onClick='kclear()', value='сбросить результаты') 
+  script(src='/javascripts/train_control.js')

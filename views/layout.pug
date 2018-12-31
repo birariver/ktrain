@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title #{layout}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    block header  
+      div.container  
+        div.navbar
+          div.top-menu
+            span.username Здравствуй, #{greeting}!
+            - var ll = {layout}
+            div.button_right
+              label
+                input(name="layout", type="radio", value="en", checked=("en"=={layout}.layout))
+                span en
+              label
+                input(name="layout", type="radio", value="bg", checked=("bg"=={layout}.layout))
+                span bg
+              label
+                input(name="layout", type="radio", value="ru", checked=("ru"=={layout}.layout))
+                span ru
+          div.main-menu
+            div.button_menu 
+              a(href=`/`) Что это
+            div.button_menu 
+              a(href=`/kboard`) Суть
+            div.button_menu
+              a(href=`/kcontrol`) Управление
+        block content
+        block foot
+          div.footer
+            pre.text-muted - - - - - - - (c)birariver 2018 - - - - - - -

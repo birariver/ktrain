@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:focus {
+    outline: none;
+}
+
+html {
+	margin: 0 auto;
+	background: #d0f0c0;
+}
+
+/*html,*/
+body {
+	min-width: 650px;
+	max-width: 1000px;
+	background: #fcfcfc;
+	margin: 30px;
+	border: 1px solid orange;
+}
+
+.container {
+	padding: 0 20px;
+}
+
+h1 {
+	color: lightsalmon;
+	margin-left: 50px;
+}
+
+.button_menu {
+	display: inline-block;
+	border: 1px solid lightgreen;
+	margin: 20px;
+	text-align: center;
+}
+
+.main-menu {
+	min-width: 20px;
+	font-size: 18px;	
+	/*list-style: none;*/
+	text-align: center;
+}
+
+.main-menu a {
+	color: darkgreen;
+	display: block;
+	padding: 13px;
+	font-size: 15px;
+	min-width: 120px;
+	text-decoration: none;
+}
+
+.main-menu a:hover {
+	color: #20603d;
+	background: #f0fff0;
+} 
+
+.navbar {
+	margin-top: 30px;
+	/*border: 1px solid blue;*/
+}
+
+.username {
+	display: inline-block;
+	color: darkred;
+	font-weight: bold;
+}
+
+.space {
+	margin: 15px 60px;
+	/*border: 1px solid blue;*/
+	color: orange;
+}
+
+.button_right {
+	/*display: inline-block;*/
+	min-width: 50%;
+	margin-top: -20px;
+	/*border: 1px solid blue;*/
+	text-align: right;
+}
+
+.button_exit {
+	/*display: inline-block;*/
+	/*border: 1px solid lightgreen;*/
+	margin-left: 10px;
+	/*margin-left: 20px;
+	width: 160px;
+	height: 30px;
+	position:relative;
+    margin-left: 80%;*/
+    text-align: right;
+	color: green;
+	background-color: white;
+	border: 0;
+	padding: 3px;
+}
+
+.button_exit:hover {
+	color: darkgreen;
+	border: 0;
+	background-color: beige;
+	/*font-weight: bold;*/
+}
+
+input[name="layout"] + span {
+	/*display: none;	*/
+	border: 1px solid lightgreen;
+	font-size: 20px;
+	background-color: beige;
+	text-align: right;
+	padding: 3px;
+	margin: 2px;
+}
+
+input[name="layout"] {
+	display: none;	
+}
+
+input[name="layout"]:checked + span {
+	background: darkcyan;
+}
+
+input[name="layout"] + span:hover {
+	color: #20603d;
+	background: #f0fff0;
+	cursor: pointer;
+}
+
+.button_layout {
+	/*display: inline-block;*/
+	border: 1px solid lightgreen;
+	font-size: 20px;
+	background-color: beige;
+	text-align: right;
+	padding: 3px;
+	margin: 2px;
+}
+
+.button_layout:hover {
+	color: #20603d;
+	background: #f0fff0;
+	cursor: pointer;
+}
+
+.button_layout_current {
+	background: darkcyan;
+}
+
+.button_reg, .button_auth {
+	display: inline-block;
+	margin-left: 0px;
+	width: 160px;
+	height: 30px;
+	color: green;
+	background-color: white;
+	border: 0;
+	border: 1px solid lightgreen;
+}
+
+.button_reg:hover {
+	color: #20603d;
+	background: #f0fff0;
+	cursor: pointer;
+}
+
+.button_auth:hover {
+	color: #20603d;
+	background: #f0fff0;
+	cursor: pointer;
+}
+
+/*input[name="username"] {
+	height: 30px;
+}*/
+
+.input {
+	margin-left: 40px;
+}
+
+.lbl {
+	display: block;
+	color: #95500c;
+}
+
+.space input {
+	height: 30px;
+	font-size: 20px;
+	margin-bottom: 10px;
+	width: 340px;
+	color: #95500c;
+	border: 0;
+	border: 1px solid orange;
+}
+
+.buttons_form {
+	/*border: 1px solid blue;*/
+	margin: 0px 0px;
+}
+
+.reset {
+	/*border: 1px solid blue;*/
+	margin-left: 100px;
+}
+
+.err {
+	color: red;
+}
+
+.text-muted {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.button_key {
+	display: inline-block;
+	margin-left: 10px;
+	width: 35px;
+	height: 15px;
+	color: saddlebrown;
+	background-color: white;
+	border: 0;
+	border: 1px solid green;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.keyboard_row, .random_letter {
+	min-width: 20px;
+	font-size: 18px;	
+	list-style: none;
+	text-align: center;
+	margin: 5px;
+	/*border: 1px solid blue;*/
+
+}
+
+.random_letter {
+	color: darkorange;
+	font-size: 21px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+.littlefinger {
+	/*background-color: seashell;*/
+	background-color: #fff3dd;
+}
+
+.ringfinger {
+	background-color: beige;
+}
+
+.middlefinger {
+	background-color: moccasin;
+}
+
+.indexfinger {
+	background-color: antiquewhite;
+}
+
+.mainfinger {
+	background-color: darkseagreen;
+}
+
+.indexfinger:hover, .mainfinger:hover, .kp {
+	background-color: tan;
+}
+
+.kabout {
+	/*border: 1px solid blue;*/
+	font-size: 17px;
+	line-height: 1.5;
+	color: green;
+	font-style: italic;
+	padding: 20px;
+}
