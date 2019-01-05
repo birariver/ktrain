@@ -21,7 +21,7 @@ var layout = ""
 
 container = document.querySelector(".container")
 buttons_layout = container.querySelectorAll('input[name="layout"]')
-for (i = 0; i < 3; i++) {
+for (i = 0; i < 4; i++) {
     if (buttons_layout[i].checked) {layout=buttons_layout[i].value}
     buttons_layout[i].addEventListener("click",button_layout_click)
 }

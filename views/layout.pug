@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title #{layout}
+    title Тренажёр
     link(rel='stylesheet', href='/stylesheets/style.css')
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
@@ -21,6 +21,9 @@ html
               label
                 input(name="layout", type="radio", value="ru", checked=("ru"=={layout}.layout))
                 span ru
+              label
+                input(name="layout", type="radio", value="fr", checked=("fr"=={layout}.layout))
+                span fr
           div.main-menu
             div.button_menu 
               a(href=`/`) Что это

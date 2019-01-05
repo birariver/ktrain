@@ -136,12 +136,58 @@ var keys_top_list_en = [["Q","W","E","R","T","Y","U","I","O","P","[","]"],
                    [0,55,25,25,25,25,25,35,35,35]
                   ]
 
+var keys_top_list_fr = [["A","Z","E","R","T","Y","U","I","O","P","ä","£"],
+           ["littlefinger",
+            "ringfinger",
+            "middlefinger",
+            "indexfinger",
+            "indexfinger",
+            "indexfinger",
+            "indexfinger",
+            "middlefinger",
+            "ringfinger",
+            "littlefinger",
+            "littlefinger",
+            "littlefinger"
+           ]]
+
+  keys_middle_list_fr = [["Q","S","D","F","G","H","J","K","L","M","\'"],
+           ["littlefinger",
+            "ringfinger",
+            "middlefinger",
+            "mainfinger",
+            "indexfinger",
+            "indexfinger",
+            "mainfinger",
+            "middlefinger",
+            "ringfinger",
+            "littlefinger",
+            "littlefinger"
+           ]]
+  keys_bottom_list_fr = [["W","X","C","V","B","N","?",".","/","§"],
+           ["littlefinger",
+            "ringfinger",
+            "middlefinger",
+            "indexfinger",
+            "indexfinger",
+            "indexfinger",
+            "indexfinger",
+            "middlefinger",
+            "ringfinger",
+            "littlefinger"
+           ]] 
+
+    keys_weight_fr = [[55,55,55,45,25,25,45,55,55,55,0,0],
+                   [55,55,55,35,25,25,35,35,55,0,0],
+                   [55,55,45,35,35,35,0,0,0,0]
+                  ]
+
 
     keys = new Object()
     keys['en'] = [keys_top_list_en, keys_middle_list_en, keys_bottom_list_en, keys_weight_en]
     keys['ru'] = [keys_top_list_ru, keys_middle_list_ru, keys_bottom_list_ru, keys_weight_ru]
     keys['bg'] = [keys_top_list_bg, keys_middle_list_bg, keys_bottom_list_bg, keys_weight_bg]
-   
+    keys['fr'] = [keys_top_list_fr, keys_middle_list_fr, keys_bottom_list_fr, keys_weight_fr]
    
 
     r_rnd = -1;
@@ -419,7 +465,7 @@ function button_reset_click() {
     var layout = ""
 
     buttons_layout = container.querySelectorAll('input[name="layout"]')
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 4; i++) {
         if (buttons_layout[i].checked) {layout=buttons_layout[i].value}
         buttons_layout[i].addEventListener("click",button_layout_click)
     }
