@@ -279,3 +279,8 @@ input[name="layout"] + span:hover {
 	font-style: italic;
 	padding: 20px;
 }
+
+.truekp {
+	color: red;
+        font-weight: bold;
+}
