@@ -248,7 +248,7 @@ input[name="layout"] + span:hover {
 
 .littlefinger {
 	/*background-color: seashell;*/
-	background-color: #fff3dd;
+	background-color: #d5edba;
 }
 
 .ringfinger {
@@ -260,7 +260,7 @@ input[name="layout"] + span:hover {
 }
 
 .indexfinger {
-	background-color: antiquewhite;
+	background-color: #ffc68c;
 }
 
 .mainfinger {

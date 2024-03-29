@@ -39,9 +39,9 @@ var keys_top_list_en = [["Q","W","E","R","T","Y","U","I","O","P","[","]"],
 					  "littlefinger"
 					 ]]
 
-    keys_weight_en = [[35,55,55,25,25,25,25,55,55,35,0,0],
-                   [35,55,55,95,25,25,95,25,55,0,0],
-                   [35,55,25,25,25,25,25,0,0,0]
+    keys_weight_en = [[135,155,155,125,125,125,125,155,155,135,0,0],
+                   [135,155,155,195,125,125,195,125,155,0,0],
+                   [135,155,125,125,125,125,125,0,0,0]
                   ]
 
     keys_top_list_ru = [["Й","Ц","У","К","Е","Н","Г","Ш","Щ","З","Х","Ъ"],
@@ -413,7 +413,7 @@ function press_key(e) {
         if (keys_weight[r_rnd][k_rnd] > 5) {
             keys_weight[r_rnd][k_rnd] = keys_weight[r_rnd][k_rnd] - 10
         }
-        if (keys_weight[r_rnd][k_rnd] < 20) {
+        if (keys_weight[r_rnd][k_rnd] < 100) {
            container.children[r].children[k].innerHTML = container.children[1].innerHTML
         }
 
@@ -423,7 +423,7 @@ function press_key(e) {
 
         container.children[r].children[k].classList.add("kp")
 
-        if (keys_weight[r_rnd][k_rnd] > 20 && container.children[r_rnd+2].children[k_rnd].innerHTML == "<pre> </pre>") {
+        if (keys_weight[r_rnd][k_rnd] > 100 && container.children[r_rnd+2].children[k_rnd].innerHTML == "<pre> </pre>") {
             container.children[r_rnd+2].children[k_rnd].innerHTML = container.children[1].innerHTML
         }
     }
@@ -440,19 +440,19 @@ function up_key(e) {
     console.log(r_rnd + " -- " + k_rnd + "  " + r + " " + k)
 
     if (r_rnd == r-2 && k_rnd == k) {
-        if (keys_weight[r_rnd][k_rnd] < 20) {
+        if (keys_weight[r_rnd][k_rnd] < 100) {
            container.children[r].children[k].innerHTML = "<pre> </pre>"
         }
 	rnd = Math.random() * keys_weight_sum()
         keys_weight_stop(rnd)
 	console.log("попал! " + r_rnd+"-"+k_rnd + " " + r + ";" + k)
 	document.querySelector(".truekp").classList.remove("truekp");
-	if (keys_weight[r_rnd][k_rnd] < 20 && container.children[r_rnd+2].children[k_rnd].innerHTML == "<pre> </pre>") {
+	if (keys_weight[r_rnd][k_rnd] < 100 && container.children[r_rnd+2].children[k_rnd].innerHTML == "<pre> </pre>") {
 	    tmr = setTimeout(function() {
 		container.children[r_rnd+2].children[k_rnd].innerHTML = container.children[1].innerHTML
-		keys_weight[r_rnd][k_rnd] = 35
+		keys_weight[r_rnd][k_rnd] = 135
   		console.log("BOOM!");
-	    }, 2000);
+	    }, 50*keys_weight[r_rnd][k_rnd]);
 	}
     }
 }
